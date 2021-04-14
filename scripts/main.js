@@ -1,0 +1,86 @@
+//variable pour attribuer une image a chaques cartes.
+var imgCartes = [1,1,2,2,3,3,4,4];
+/*variable pour l'état des cartes :
+(0)= face cachée
+(1)= face visible
+(-1)= déja retournée
+*/
+var etatsCartes = [0,0,0,0,0,0,0,0];
+//tableau des cartes retournées pendant la partie
+var carteRetournees = [];
+//variable pour les paires trouvées
+var nbPairesTrouvees = 0;
+//variable pour pointer les image de notre tableau.
+var imgPlateau = document.getElementById('plateau').getElementsByTagName('img');
+//On crée une boucle pour parcourir la longueur de notre tableau
+for(var i = 0; i<imgPlateau.length;i++){
+  //Attribution d'un numéro de carte à l'objet img
+  imgPlateau[i].numCarte = i;
+  imgPlateau[i].onClick = function () {
+    controleDuJeu(this.numCarte);
+  }
+}
+//J'appelle ma fonction initialiseJeu()
+initialisationJeu();
+/*
+Je crée une fonction majAffichage() qui met à jour l'affichage de la carte dont on passe le numéro en paramètre.
+L'affichage rendu dépend de l'état actuel de la carte (donné par le tableau etatsCartes) :
+état 0 : carte face cachée, on affichage l'image de dos de carte : reverse-card.jpeg,
+état 1 : carte retournée, on affiche l'image du motif correspondant, on notera que les différentes images des motifs sont dans les fichiers nommés carte1.png, carte2.png, etc.,
+état -1 : carte enlevée du jeu, on cache l'élément img.
+*/
+function majAffichage(numCarte) {
+  //SI la carte numéro ... est de dos,
+  switch (etatsCartes[numCarte]) {
+    //ALORS dans le cas n0 on affichage l'image de dos de carte.
+    case 0:
+      imgPlateau[numCarte].src = 'Images/reverse-card.jpeg';
+      break;
+      //ALORS dans le cas n1 on affichage l'image de face.
+    case 1:
+      imgPlateau[numCarte].src = 'Images/Card'+ imgCartes[numCarte] + '.jpg';
+      break;
+      //ALORS dans le cas n-1 la carte disparait.
+    case -1:
+      imgPlateau[numCarte].style.visibility = 'hidden';
+      break;
+  }
+}
+//Je crée la fonction rejouer()
+function rejouer(){
+  alert(`Bravo ! ! !`);
+  // la méthode location.reload() permet de recharger la page initiale dans le navigateur.
+  location.reload();
+}
+/*Je crée une fonction qui mélange les numéros de nos imgCartes.
+Pour cela un algorithme de mélange est utilisé.(Fisher-Yates)
+voir: https://www.delftstack.com/fr/howto/javascript/shuffle-array-javascript/
+voir: https://sciences-du-numerique.fr/programmation-en-javascript/melanger-les-elements-d-un-tableau/6
+*/
+function initialisationJeu() {
+  //je crée une boucle qui va fontionner dans l'ordre inverse du tableau pour l'affichage initaile de mes images.
+  for(var position = imgCartes.length-1; position>=1; position--){
+    //Je génère une position aléatoire de mes images dans le tableau.
+    var random = Math.floor(Math.random()*(position+1));
+    //cette variable correspond à l'échange de place des images entre elles dans le tableau.(de manière destructurée)
+    //Et...
+    var newPosition = imgCartes[position];
+		imgCartes[position] = imgCartes[hasard];
+		imgCartes[hasard] = newPosition;
+  }
+}
+function controleDuJeu() {
+  //SI le nombre de cartes retournées dans le tableau est inférieur à 2.
+  if(carteRetournees.length<2){
+    //SI la carte n... est de dos (état 0)
+    if(etatsCartes[numCarte] == 0){
+      //ET qu'elle est cliquée, l'état de la carte n... passe à (état 1 = face visible)
+      etatsCartes[numCarte] = 1;
+      //on ajoute le numéro de la carte à la fin du tableau des cartes retournées (voir var carteRetournees ligne 10)
+      carteRetournees.push (numCarte);
+      //On fait la MAJ de l'affichage de la carte numéro ...
+      majAffichage(numCarte);
+    }
+    if(carteRetournees.length)
+  }
+}
