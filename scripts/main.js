@@ -12,6 +12,7 @@ var carteRetournees = [];
 var nbPairesTrouvees = 0;
 //variable pour pointer les image de notre tableau.
 var imgPlateau = document.getElementById('plateau').getElementsByTagName('img');
+
 //On crée une boucle pour parcourir la longueur de notre tableau
 for(var i = 0; i<imgPlateau.length;i++){
   //Attribution d'un numéro de carte à l'objet img
@@ -20,8 +21,10 @@ for(var i = 0; i<imgPlateau.length;i++){
     controleDuJeu(this.numCarte);
   }
 }
+
 //J'appelle ma fonction initialiseJeu()
 initialisationJeu();
+
 /*
 Je crée une fonction majAffichage() qui met à jour l'affichage de la carte dont on passe le numéro en paramètre.
 L'affichage rendu dépend de l'état actuel de la carte (donné par le tableau etatsCartes) :
@@ -46,12 +49,14 @@ function majAffichage(numCarte) {
       break;
   }
 }
+
 //Je crée la fonction rejouer()
 function rejouer(){
   alert(`Bravo ! ! !`);
   // la méthode location.reload() permet de recharger la page initiale dans le navigateur.
   location.reload();
 }
+
 /*Je crée une fonction qui mélange les numéros de nos imgCartes.
 Pour cela un algorithme de mélange est utilisé.(Fisher-Yates)
 voir: https://www.delftstack.com/fr/howto/javascript/shuffle-array-javascript/
@@ -69,6 +74,7 @@ function initialisationJeu() {
 		imgCartes[hasard] = newPosition;
   }
 }
+
 function controleDuJeu() {
   //SI le nombre de cartes retournées dans le tableau est inférieur à 2.
   if(carteRetournees.length<2){
@@ -81,6 +87,17 @@ function controleDuJeu() {
       //On fait la MAJ de l'affichage de la carte numéro ...
       majAffichage(numCarte);
     }
-    if(carteRetournees.length)
+    //SI le nombre de carte retournée est égale à 2
+    if(carteRetournees.length == 2){
+      //je crée une variable donnant le nouvel état.
+      var nouvelEtat = 0;
+      //SI 
+      if(imgCartes[carteRetournees[0]] == imgCartes [carteRetournees[1]]){
+        nouvelEtat = -1;
+        nbPairesTrouvees++;
+      }
+      etatsCartes [carteRetournees[0]] = nouvelEtat;
+      etatsCartes [carteRetournees[1]] = nouvelEtat;
+    }
   }
 }
