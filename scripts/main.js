@@ -1,12 +1,12 @@
 //variable pour attribuer une image a chaques cartes.
-var imgCartes = [1,1,2,2,3,3,4,4];
+var imgCartes = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,18,19,19,20,20];
 /*
 variable pour l'état des cartes :
 (0)= face cachée
 (1)= face visible
 (-1)= déja retournée
 */
-var etatsCartes = [0,0,0,0,0,0,0,0];
+var etatsCartes = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 //tableau des cartes retournées pendant la partie
 var carteRetournees = [];
 //variable pour les paires trouvées
@@ -108,9 +108,10 @@ function controleDuJeu(numCarte) {
         majAffichage(carteRetournees[0]);
         majAffichage(carteRetournees[1]);
         carteRetournees = [];
-        if (nbPairesTrouvees == 4) {
+        if (nbPairesTrouvees == 20) {
           rejouer();
         }
+        //750ms
       },750);
     }
   }
