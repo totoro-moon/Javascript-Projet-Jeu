@@ -22,8 +22,8 @@ for(var i = 0; i<imgPlateau.length;i++){
   }
 }
 
-//J'appelle ma fonction initialiseJeu()
-initialisationJeu();
+//J'appelle ma fonction initialisationDuJeu()
+initialisationDuJeu();
 
 /*
 Je crée une fonction majAffichage() qui met à jour l'affichage de la carte dont on passe le numéro en paramètre.
@@ -62,7 +62,7 @@ Pour cela un algorithme de mélange est utilisé.(Fisher-Yates)
 voir: https://www.delftstack.com/fr/howto/javascript/shuffle-array-javascript/
 voir: https://sciences-du-numerique.fr/programmation-en-javascript/melanger-les-elements-d-un-tableau/6
 */
-function initialisationJeu() {
+function initialisationDuJeu() {
   //je crée une boucle qui va fontionner dans l'ordre inverse du tableau pour l'affichage initaile de mes images.
   for(var position = imgCartes.length-1; position>=1; position--){
     //Je génère une position aléatoire de mes images dans le tableau.
@@ -91,7 +91,7 @@ function controleDuJeu() {
     if(carteRetournees.length == 2){
       //je crée une variable donnant le nouvel état.
       var nouvelEtat = 0;
-      //SI 
+      //SI
       if(imgCartes[carteRetournees[0]] == imgCartes [carteRetournees[1]]){
         nouvelEtat = -1;
         nbPairesTrouvees++;
