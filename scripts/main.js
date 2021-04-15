@@ -1,6 +1,7 @@
 //variable pour attribuer une image a chaques cartes.
 var imgCartes = [1,1,2,2,3,3,4,4];
-/*variable pour l'état des cartes :
+/*
+variable pour l'état des cartes :
 (0)= face cachée
 (1)= face visible
 (-1)= déja retournée
@@ -17,12 +18,12 @@ var imgPlateau = document.getElementById('plateau').getElementsByTagName('img');
 for(var i = 0; i<imgPlateau.length;i++){
   //Attribution d'un numéro de carte à l'objet img
   imgPlateau[i].numCarte = i;
-  imgPlateau[i].onClick = function () {
+  imgPlateau[i].onclick = function () {
     controleDuJeu(this.numCarte);
   }
 }
 
-//J'appelle ma fonction initialisationDuJeu()
+//J'appelle ma fonction initilisationDuJeu()
 initialisationDuJeu();
 
 /*
@@ -37,7 +38,7 @@ function majAffichage(numCarte) {
   switch (etatsCartes[numCarte]) {
     //ALORS dans le cas n0 on affichage l'image de dos de carte.
     case 0:
-      imgPlateau[numCarte].src = 'Images/reverse-card.jpeg';
+      imgPlateau[numCarte].src = 'Images/reverse-card.jpg';
       break;
       //ALORS dans le cas n1 on affichage l'image de face.
     case 1:
@@ -52,7 +53,7 @@ function majAffichage(numCarte) {
 
 //Je crée la fonction rejouer()
 function rejouer(){
-  alert(`Bravo ! ! !`);
+  alert('Bravo ! ! !');
   // la méthode location.reload() permet de recharger la page initiale dans le navigateur.
   location.reload();
 }
@@ -70,12 +71,12 @@ function initialisationDuJeu() {
     //cette variable correspond à l'échange de place des images entre elles dans le tableau.(de manière destructurée)
     //Et...
     var newPosition = imgCartes[position];
-		imgCartes[position] = imgCartes[hasard];
-		imgCartes[hasard] = newPosition;
+		imgCartes[position] = imgCartes[random];
+		imgCartes[random] = newPosition;
   }
 }
 
-function controleDuJeu() {
+function controleDuJeu(numCarte) {
   //SI le nombre de cartes retournées dans le tableau est inférieur à 2.
   if(carteRetournees.length<2){
     //SI la carte n... est de dos (état 0)
@@ -91,13 +92,26 @@ function controleDuJeu() {
     if(carteRetournees.length == 2){
       //je crée une variable donnant le nouvel état.
       var nouvelEtat = 0;
-      //SI
+      //SI la carte qui se trouve en position [0] dans le tableau carteRetournees est égale à la carte qui se trouve en position [1],
       if(imgCartes[carteRetournees[0]] == imgCartes [carteRetournees[1]]){
+        //Alors elle disparaissent de l'écran
         nouvelEtat = -1;
+        //la variable nbPairesTrouvees est incrémentée de 1.
         nbPairesTrouvees++;
       }
+      //Si les deux cartes ne sont pas identiques, elles reviennent en position initiale.
       etatsCartes [carteRetournees[0]] = nouvelEtat;
       etatsCartes [carteRetournees[1]] = nouvelEtat;
+
+      //Fontion correspondant au temps imparti du changement de l'affichage des cartes.
+      setTimeout(function () {
+        majAffichage(carteRetournees[0]);
+        majAffichage(carteRetournees[1]);
+        carteRetournees = [];
+        if (nbPairesTrouvees == 4) {
+          rejouer();
+        }
+      },750);
     }
   }
 }
