@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<!-- Link pour la modal -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<!-- link CSS -->
+  <link rel="stylesheet" href="Css/game.style.css">
+  <title>Memory</title>
+</head>
+<body>
+    <div class="wrap">
+      <div class="calcifer">
+        <div class="flame">
+          <div class="rear">
+            <div class="flames-round"></div>
+            <div class="flames-small"></div>
+            <div class="flames-tiny"></div>
+          </div>
+          <div class="front"></div>
+        </div>
+        <div class="face">
+          <div class="eyes"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="log">
+          <div class="lines"></div>
+          <div class="crack-l"></div>
+          <div class="crack-r"></div>
+        </div>
+        <div class="left-arm"></div>
+        <div class="right-arm"></div>
+      </div>
+    </div>
+  <!-- 1er container qui affiche les images surprises -->
+  <div id="surprise" class="container">
+    <div class="row">
+      <table   class="table no-border d-flex justify-content-center">
+        <tr>
+          <td class="no-border col-3">
+            <img class="surprise image-fluid" src="Images/Image-1.png"/>
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-2.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-3.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-4.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-5.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-6.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-7.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-8.png" />
+          </td>
+        </tr>
+        <tr>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-9.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-10.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-11.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-12.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-13.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-14.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-15.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-16.png" />
+          </td>
+        </tr>
+        <tr>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-17.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-18.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-19.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-20.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-21.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-22.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-23.png" />
+          </td>
+          <td class="col-3">
+            <img class="surprise image-fluid" src="Images/Image-24.png" />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- container des carte du jeu -->
+  <div class="container">
+    <div class="row">
+      <table id="plateau" class="table no-border d-flex justify-content-center">
+        <tr>
+          <td class="col-3 no-border">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+        </tr>
+        <tr>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+        </tr>
+        <tr>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+          <td class="col-3">
+            <img class="image-fluid" src="Images/reverse-card.jpg" />
+          </td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+  <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>

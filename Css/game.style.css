@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+}
+
+div, div:after, div:before {
+  position: absolute;
+  content: "";
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #691d05, #040202);
+}
+
+.calcifer {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 460px;
+  width: 368px;
+  margin: auto;
+}
+
+.log {
+  width: 690px;
+  height: 138px;
+  background: #7e1c05;
+  background: radial-gradient(ellipse at top, #f9b413 0%, #8a1b06 40%, #1b0c08 90%);
+  top: 414px;
+  left: -161px;
+  overflow: hidden;
+}
+
+.lines {
+  width: 920px;
+  height: 69px;
+  border: 2.3px solid #1b0c08;
+  left: -115px;
+  top: 23px;
+}
+
+.lines:after {
+  width: 920px;
+  height: 46px;
+  border: 2.3px solid #1b0c08;
+  left: -115px;
+  top: 43.7px;
+}
+
+.lines:before {
+  width: 920px;
+  height: 46px;
+  border: 2.3px solid #1b0c08;
+  left: -115px;
+  top: 11.5px;
+}
+
+.crack-l {
+  width: 0;
+  height: 0;
+  border-left: 368px solid #1b0c08;
+  border-top: 11.5px solid transparent;
+  top: 46px;
+}
+
+.crack-l:after {
+  width: 0;
+  height: 0;
+  border-left: 368px solid #8a1b06;
+  border-bottom: 11.5px solid transparent;
+  top: 0px;
+  left: -368px;
+  opacity: 0.4;
+}
+
+.crack-r {
+  width: 0;
+  height: 0;
+  border-right: 368px solid #1b0c08;
+  border-top: 11.5px solid transparent;
+  top: 92px;
+  right: 0;
+}
+
+.crack-r:after {
+  width: 0;
+  height: 0;
+  border-right: 368px solid #8a1b06;
+  border-bottom: 11.5px solid transparent;
+  opacity: 0.4;
+}
+
+.rear {
+  width: 368px;
+  height: 391px;
+  top: 69px;
+  background: #f00;
+  border-radius: 50% 50% 40% 40%;
+}
+
+.flames-round {
+  width: 138px;
+  height: 138px;
+  border-radius: 50%;
+  background: #f20;
+  left: 46px;
+  top: -69px;
+  box-shadow: -57.5px 299px 0 0 #fc860a, -69px 184px 0 0 #fe4202, 195.5px 92px 0 0 #fe2001, 207px 276px 0 0 #fd7206, 115px -46px 0 0 #fe1001;
+}
+
+.flames-small {
+  width: 69px;
+  height: 69px;
+  border-radius: 50%;
+  background: #f20;
+  top: 23px;
+  box-shadow: 161px 46px 0 0 #ff2400, 115px 115px 0 0 #fe4202, 310.5px 92px 0 0 #fe2001, 230px -34.5px 0 0 #fe2001, -23px 184px 0 0 #fd6704, 126.5px -172.5px 0 0 #fe1001;
+}
+
+.flames-tiny {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #f20;
+  top: -23px;
+  left: 11.5px;
+  box-shadow: -11.5px 115px 0 0 #ff2400, 149.5px 92px 0 0 #fe4202, 276px 0 0 0 #fe2001, -23px 184px 0 0 #fd6704, 138px -172.5px 0 0 #fe1001, 184px -115px 0 0 #fe0000, 356.5px 207px 0 0 #ff2400, 92px 23px 0 0 #fe4202;
+}
+
+.front {
+  width: 368px;
+  height: 391px;
+  background: #f00;
+  background: radial-gradient(circle at bottom, #f7d91b 0%, #fe5f02 50%, transparent 80%);
+  border-radius: 50% 50% 40% 40%;
+  top: 69px;
+}
+
+.eyes {
+  width: 69px;
+  height: 69px;
+  background: #fee69f;
+  border-radius: 50%;
+  top: 299px;
+  left: 57.5px;
+  box-shadow: 184px 0 0 0 #fee68f;
+}
+
+.eyes:after {
+  width: 11.5px;
+  height: 11.5px;
+  background: #56210f;
+  border-radius: 50%;
+  top: 16.1px;
+  left: 34.5px;
+  box-shadow: 172.5px 0 0 0 #56210f;
+}
+
+.mouth {
+  width: 85.1px;
+  height: 20.7px;
+  background: #ff2400;
+  border-radius: 50% 50% 20% 20%;
+  top: 368px;
+  left: 142.6px;
+  opacity: 0.4;
+}
+
+.left-arm {
+  width: 46px;
+  height: 115px;
+  background: #fc860a;
+  border-radius: 50% 0% 50% 50%;
+  top: 356.5px;
+  left: 34.5px;
+  transform: rotate(-80deg);
+}
+
+.right-arm {
+  width: 46px;
+  height: 115px;
+  background: #fd7026;
+  border-radius: 0% 50% 50% 50%;
+  top: 368px;
+  left: 276px;
+  transform: rotate(60deg);
+}
+
+.ccc, .ccc a {
+  bottom: 0px;
+  right: 0px;
+  font-family: Tahoma;
+  font-size: 10pt;
+  padding: 5px;
+  background: #eb5252;
+  border-radius: 5px 0 0 0;
+  color: white;
+}
+
+img {
+  cursor: pointer;
+  border: solid 1px #5a5959;
+  height: 25vh;
+}
+
+.surprise {
+  border: none;
+}
+
+.container {
+  max-width: 205vh;
+  height: 65vh;
+}
+
+.row {
+  position: relative;
+  top: 12%;
+}
+.row div, .row div:after, .row div:before {
+  position: absolute;
+  content: "";
+}
+
+.table.no-border tr td, .table.no-border tr th {
+  border-width: 0;
+}
+
+#gifTotoro {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+#butModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+p {
+  color: white;
+}
+
+/*# sourceMappingURL=game.style.css.map */

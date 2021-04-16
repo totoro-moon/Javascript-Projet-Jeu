@@ -16,12 +16,6 @@
     .row{
     position: relative;
     top: 12%;
-    animation: floatanim ease-in-out 4s;
-    animation-iteration-count: infinite;
-    }
-    .table.no-border tr td, .table.no-border tr th {
-    border-width: 0;
-}
     div, div:after, div:before {
     position:absolute;
     content:"";

@@ -1,17 +1,17 @@
 //variable pour attribuer une image a chaques cartes.
-var imgCartes = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,18,19,19,20,20];
+var imgCartes = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12];
 /*
 variable pour l'état des cartes :
 (0)= face cachée
 (1)= face visible
 (-1)= déja retournée
 */
-var etatsCartes = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var etatsCartes = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 //tableau des cartes retournées pendant la partie
 var carteRetournees = [];
 //variable pour les paires trouvées
 var nbPairesTrouvees = 0;
-//variable pour pointer les image de notre tableau.
+//variable pour pointer les images de notre tableau.
 var imgPlateau = document.getElementById('plateau').getElementsByTagName('img');
 
 //On crée une boucle pour parcourir la longueur de notre tableau
@@ -53,9 +53,11 @@ function majAffichage(numCarte) {
 
 //Je crée la fonction rejouer()
 function rejouer(){
-  alert('Bravo ! ! !');
+  setTimeout(function(){
+    alert('Bravo ! ! !');
+},3000);
   // la méthode location.reload() permet de recharger la page initiale dans le navigateur.
-  location.reload();
+  // location.reload();
 }
 
 /*Je crée une fonction qui mélange les numéros de nos imgCartes.
@@ -108,7 +110,7 @@ function controleDuJeu(numCarte) {
         majAffichage(carteRetournees[0]);
         majAffichage(carteRetournees[1]);
         carteRetournees = [];
-        if (nbPairesTrouvees == 20) {
+        if (nbPairesTrouvees == 12) {
           rejouer();
         }
         //750ms
