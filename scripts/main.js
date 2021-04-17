@@ -55,11 +55,16 @@ function majAffichage(numCarte) {
 function rejouer(){
   setTimeout(function(){
     alert('Bravo ! ! !');
-},3000);
-  // la méthode location.reload() permet de recharger la page initiale dans le navigateur.
-  // location.reload();
+  },3000);
+  // la fonction .style.diplay efface le tableau surprise avec un delais de temps
+  setTimeout(function () {
+    document.getElementById("surprise").style.display = "none";
+  }, 2000);
+  // la méthode location.reload() permet de recharger la page initiale dans le navigateur avec un delais de temps.
+  window.setTimeout(function () {
+    location.reload()
+  }, 8000);
 }
-
 /*Je crée une fonction qui mélange les numéros de nos imgCartes.
 Pour cela un algorithme de mélange est utilisé.(Fisher-Yates)
 voir: https://www.delftstack.com/fr/howto/javascript/shuffle-array-javascript/

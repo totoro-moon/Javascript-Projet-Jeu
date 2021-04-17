@@ -1,144 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel="stylesheet" href="Css/style.css">
-  <title>Memory</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="Css/style.css">
+    <title>Jeux Memory</title>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="boh-yubird">
-      <div class="boh">
-        <div class="feet"></div>
-        <div class="tail"></div>
-        <div class="lower-body"></div>
-        <div class="upper-body"></div>
-        <div class="head">
-          <div class="eyes"></div>
-          <div class="nose"></div>
-          <div class="ears"></div>
+    <div class="wrap">
+        <div class="boh-yubird">
+            <div class="boh">
+                <!-- post-it -->
+                <div class="row">
+                    <div class="texte p-4">
+                        <h3>Tu veux jouer ?</h3>
+                        <h4>Fait marcher un peu ta mémoire!</h4>
+                        <p>Touves les paires identiques pour gagnez! T'inquiétes y a pas de pression!</p>
+                        <button type="button" class="btn btn-outline-dark"><a href="pageMemory.html">Jouer</button>
+                    </div>
+                </div>
+                <!-- perso boh -->
+                <div class="feet"></div>
+                <div class="tail"></div>
+                <div class="lower-body"></div>
+                <div class="upper-body"></div>
+                <div class="head">
+                    <div class="eyes"></div>
+                    <div class="nose"></div>
+                    <div class="ears"></div>
+                </div>
+            </div>
+            <!-- perso yubird -->
+            <div class="yubird">
+                <div class="left-wing"></div>
+                <div class="right-wing"></div>
+                <div class="left-leg"></div>
+                <div class="right-leg"></div>
+                <div class="hair">
+                    <div class="hair-1"></div>
+                    <div class="hair-2"></div>
+                </div>
+                <div class="body"></div>
+                <div class="beak"></div>
+                <div class="yu-eyes"></div>
+            </div>
         </div>
-      </div>
-      <div class="yubird">
-        <div class="left-wing"></div>
-        <div class="right-wing"></div>
-        <div class="left-leg"></div>
-        <div class="right-leg"></div>
-        <div class="hair">
-          <div class="hair-1"></div>
-          <div class="hair-2"></div>
-        </div>
-        <div class="body"></div>
-        <div class="beak"></div>
-        <div class="yu-eyes"></div>
-      </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="row bg">
-      <table id="plateau" class="table no-border d-flex justify-content-center">
-        <tr>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-        </tr>
-        <tr>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-        </tr>
-        <tr>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-          <td class="col-3">
-            <img class="image-fluid" src="Images/reverse-card.jpg" />
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <script type="text/javascript" src="scripts/main.js"></script>
 </body>
+
 </html>
