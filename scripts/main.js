@@ -54,7 +54,7 @@ function majAffichage(numCarte) {
 //Je crée la fonction rejouer()
 function rejouer(){
   setTimeout(function(){
-    alert('Bravo ! ! !');
+    $('#exampleModal').modal('show');
   },3000);
   // la fonction .style.diplay efface le tableau surprise avec un delais de temps
   setTimeout(function () {
