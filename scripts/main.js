@@ -54,6 +54,7 @@ function majAffichage(numCarte) {
 //Je crée la fonction rejouer()
 function rejouer(){
   setTimeout(function(){
+    //utilisation de JQuery pour l'affichage de la modal
     $('#exampleModal').modal('show');
   },3000);
   // la fonction .style.diplay efface le tableau surprise avec un delais de temps
@@ -71,7 +72,7 @@ voir: https://www.delftstack.com/fr/howto/javascript/shuffle-array-javascript/
 voir: https://sciences-du-numerique.fr/programmation-en-javascript/melanger-les-elements-d-un-tableau/6
 */
 function initialisationDuJeu() {
-  //je crée une boucle qui va fontionner dans l'ordre inverse du tableau pour l'affichage initaile de mes images.
+  //je crée une boucle qui va fonctionner dans l'ordre inverse du tableau pour l'affichage initial de mes images.
   for(var position = imgCartes.length-1; position>=1; position--){
     //Je génère une position aléatoire de mes images dans le tableau.
     var random = Math.floor(Math.random()*(position+1));

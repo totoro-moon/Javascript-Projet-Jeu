@@ -1,4 +1,4 @@
-// variable taille 
+// variable taille
 $size:110px;
 @font-face {
 font-family: "BlockNote";
@@ -8,11 +8,23 @@ font-family: "BlockNote";
     margin:0;
     font-family: "BlockNote";
     }
+
+    .container-title{
+      // border: blue 2px solid;
+      margin: 4vh;
+      width: 100vh;
+      height: 25vh;
+      z-index: 1;
+      h1{
+        font-size: 70px;
+        // writing-mode: sideways-lr;
+      }
+    }
     //post it
     .container{
     max-width:205vh;
-    height:65vh; 
-    border: blue 2px solid;
+    height:65vh;
+    // border: blue 2px solid;
     margin-top: 45vh;
     }
     .row{
@@ -36,7 +48,7 @@ font-family: "BlockNote";
     }
     p{
     font-size: 16px;
-    margin-top: 8%;  
+    margin-top: 8%;
     }
     .btn{
     font-size: 25px;
@@ -45,7 +57,7 @@ font-family: "BlockNote";
     a{
     color: black;
     }
-} 
+}
     //perso ghibli
     div, div:after, div:before {
     position:absolute;
@@ -53,7 +65,7 @@ font-family: "BlockNote";
     }
     .wrap {
     width:100%;
-    height:100%;  
+    height:100%;
     background: radial-gradient(circle, #b7b9a4, #6a7f83);
     }
     .boh-yubird {
@@ -87,7 +99,7 @@ font-family: "BlockNote";
     border-radius: 50%;
     top:$size*0.75;
     left:$size*0.03;
-    box-shadow: $size*0.45 0 0 0 #d7b5aa, 
+    box-shadow: $size*0.45 0 0 0 #d7b5aa,
     inset $size*-0.15 0 #d7b5aa;
     }
     .lower-body:after {
@@ -116,7 +128,7 @@ font-family: "BlockNote";
     border-radius: 50%;
     top:$size*0.38;
     left:$size*0.23;
-    box-shadow: $size*-0.31 0 0 0 #f3d9cd, 
+    box-shadow: $size*-0.31 0 0 0 #f3d9cd,
     inset $size*-0.1 $size*-0.05 #dec0b7;
     }
     .eyes {
@@ -162,7 +174,7 @@ font-family: "BlockNote";
     top: 0;
     left: $size*0.4;
     box-shadow: $size*-0.4 0 0 0 #efbbba,
-    inset $size*0.05 $size*-0.05 #deafac;  
+    inset $size*0.05 $size*-0.05 #deafac;
     }
     .feet {
     background:#e89d97;

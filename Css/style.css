@@ -7,10 +7,19 @@ body {
   font-family: "BlockNote";
 }
 
+.container-title {
+  margin: 4vh;
+  width: 100vh;
+  height: 25vh;
+  z-index: 1;
+}
+.container-title h1 {
+  font-size: 70px;
+}
+
 .container {
   max-width: 205vh;
   height: 65vh;
-  border: blue 2px solid;
   margin-top: 45vh;
 }
 
